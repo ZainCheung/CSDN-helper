@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CSDN博客自动点赞评论
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  打开任意一个CSDN博客页面,就可以进行自动点赞评论,可以自定义策略与评论内容,高度可定制化
 // @author       ZainCheung
 // @match        *://blog.csdn.net/*/article/details/*
