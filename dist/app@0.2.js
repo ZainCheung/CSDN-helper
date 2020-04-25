@@ -66,30 +66,6 @@ var Main = {
                 label: '不限'
                 }
             ],
-            // dateOptions: {
-            //     disabledDate(time) {
-            //         return time.getTime() > Date.now();
-            //     },
-            //     shortcuts: [{
-            //         text: "今天",
-            //         onClick(picker) {
-            //         picker.$emit("pick", new Date());
-            //         }
-            //     },this.getDateShortcut("一周内",3600 * 1000 * 24 * 7),
-            //     this.getDateShortcut("一月内",3600 * 1000 * 24 * 30),
-            //     this.getDateShortcut("一年内",3600 * 1000 * 24 * 30 * 12),
-            //     this.getDateShortcut("两年内",3600 * 1000 * 24 * 30 * 12 * 2),
-            //     this.getDateShortcut("五年内",3600 * 1000 * 24 * 30 * 12 * 5),
-            //     this.getDateShortcut("十年内",3600 * 1000 * 24 * 30 * 12 * 10),
-            //     {
-            //         text: "不限",
-            //         onClick(picker) {
-            //         const date = new Date();
-            //         date.setTime(943977600 * 1000);
-            //         picker.$emit("pick", date);
-            //         }
-            //     }]
-            // },
             commentList: {
                 R: [
                     {text: "写的不错哦,欢迎回访我的博客哦"},
@@ -121,24 +97,17 @@ var Main = {
                     
                 ],
                 L: [
-                    {text: "0写了这么多字,手动码字一定很累吧!欢迎回访我的博客"},
-                    {text: "1我在大佬的评论区瑟瑟发抖,欢迎大佬回访我的博客"},
-                    {text: "2膜拜技术大佬,来我博客指点江山吧"},
-                    {text: "3收获满满,码字不易,欢迎回访我的博客"},
-                    {text: "4不曾想,若是有一天我能像你一样写出这么好的博客该多好,欢迎来我的博客指点"},
-                    {text: "5天若有情天亦老,来我博客看看可好"}
+                    {text: "写了这么多字,手动码字一定很累吧!欢迎回访我的博客"},
+                    {text: "我在大佬的评论区瑟瑟发抖,欢迎大佬回访我的博客"},
+                    {text: "膜拜技术大佬,来我博客指点江山吧"},
+                    {text: "收获满满,码字不易,欢迎回访我的博客"},
+                    {text: "不曾想,若是有一天我能像你一样写出这么好的博客该多好,欢迎来我的博客指点"},
+                    {text: "天若有情天亦老,来我博客看看可好"}
                     
                 ]
             },
         };
     },
-    // computed: {
-    //     timeDefault() {
-    //         var date = new Date();
-    //         var s1 = (date.getFullYear()-2) + "-" + (date.getMonth() + 1) + "-" + (date.getDate());
-    //         return s1;
-    //     }
-    // },
     mounted() {
         this.initItem("likeSwitch",0);
         this.initItem("likeCustom",0);
@@ -177,16 +146,6 @@ var Main = {
                     default:this[item] = localStorage[item];
                         break;
                 }
-                // if(item=="commentRange"){
-                //     var str = localStorage.commentRange;
-                //     this.commentRange = [str.split(",")[0],str.split(",")[1]];
-                //     return;
-                // }
-                // if(item == "commentList"){
-                //     this.commentList = JSON.parse(localStorage.commentList);
-                //     return;
-                // }
-                // this[item] = localStorage[item];
             }else{
                 switch (item) {
                     case "commentList":
@@ -197,12 +156,6 @@ var Main = {
                     default:this[item] = localStorage[item] = value;
                         break;
                 }
-                // if(item == "commentList"){
-                //     this[item] = value;
-                //     localStorage[item] = JSON.stringify(value);
-                //     return;
-                // }
-                // this[item] = localStorage[item] = value;
             }
         },
         /**
@@ -232,17 +185,6 @@ var Main = {
             }
             return str;
         },
-        // getDateShortcut(text,time){
-        //     var short = {
-        //         text: text,
-        //         onClick(picker) {
-        //             const date = new Date();
-        //             date.setTime(date.getTime() - time);
-        //             picker.$emit("pick", date);
-        //         }
-        //     };
-        //     return short;
-        // },
         /* 负责日期选择器的日期格式化:时间戳减去多少毫秒之前 */
         getDateOption(time){
             var date = new Date();
