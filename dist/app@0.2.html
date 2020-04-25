@@ -1,0 +1,521 @@
+<div id="app" >
+    <div class="el-backtop" @click="menuShow = true" >
+        <i class="iconfont iconshezhi"></i>
+    </div>
+    <el-drawer
+    :visible.sync="menuShow"
+    direction="ltr"
+    custom-class="demo-drawer"
+    ref="drawer"
+    :with-header="false"
+    size="33%"
+    >
+        <el-container>
+            <el-header style="background: white;">
+                <el-row :gutter="24">
+                    <el-col :span="12" :offset="7"><div style="margin-top: 20px;font-size:25px;" ><label >CSDN 助手</label> </div></el-col>
+                </el-row>
+            </el-header>
+
+            <el-main>
+                <el-collapse>
+                    <el-collapse-item name="1" >
+                        <template slot="title">
+                            <div style="text-align: right;margin-left: 39%;">
+                                <i class="iconfont icondianzan"></i> &nbsp;<span style="font-size:18px">点 赞</span>
+                            </div>
+                        </template>
+
+                        <!-- 点赞总开关 -->
+                        <el-row :gutter="0" style="margin-top: 10px;">
+                            <el-col :span="20" :offset="2">
+                                <el-tooltip class="item" effect="dark" content="当天点赞次数用完自动关闭" placement="right">
+                                    <el-switch
+                                        v-model="likeSwitch"
+                                        active-value="100"
+                                        inactive-value="0"
+                                        active-text="打开自动点赞">
+                                    </el-switch>
+                                </el-tooltip>
+                            </el-col>
+                        </el-row>
+
+                        <!-- 点赞个性化配置开关 -->
+                        <el-row :gutter="0"  v-if="likeSwitch==100" style="margin-top: 20px;">
+                            <el-col :span="20" :offset="3">
+                                <el-tooltip class="item" effect="dark" content="将会对文章字数、阅读量、发布日期进行筛选配置" placement="right">
+                                    <transition name="el-fade-in-linear">
+                                        <el-switch
+                                            v-model="likeCustom"
+                                            active-value="100"
+                                            inactive-value="0"
+                                            active-text="个性化配置">
+                                        </el-switch>
+                                    </transition>
+                                </el-tooltip>
+                            </el-col>
+                        </el-row>
+
+                        <!-- 点赞最低字数计数器 -->
+                        <el-row :gutter="0" v-if="likeSwitch==100 && likeCustom==100" style="margin-top: 20px;">
+                            <el-col :span="22" :offset="5">
+                                    <label>最低字数：</label>
+                                    <el-input-number 
+                                        v-model="likeWordNumber" 
+                                        controls-position="right" 
+                                        size="small" 
+                                        :step="100" 
+                                        :min="0" 
+                                        :max="10000"
+                                        :precision="0">
+                                    </el-input-number>
+                                <el-tooltip class="item" effect="dark" content="只点赞字数高于这个值的文章" placement="top">
+                                    <i class="header-icon el-icon-info"></i>
+                                </el-tooltip>
+                            </el-col>
+                        </el-row>
+
+                        <!-- 点赞最低浏览量 -->
+                        <el-row :gutter="0" v-if="likeSwitch==100 && likeCustom==100" style="margin-top: 20px;">
+                            <el-col :offset="5">
+                                    <span>最低浏览量：</span>
+                                    <el-input-number 
+                                        v-model="likeReadNumber" 
+                                        controls-position="right" 
+                                        size="small" 
+                                        :step="100" 
+                                        :min="0" 
+                                        :max="10000"
+                                        :precision="0"
+                                        label="最低浏览量">
+                                    </el-input-number>
+                                <el-tooltip class="item" effect="dark" content="只点赞阅读量高于这个值的文章" placement="right">    
+                                    <i class="header-icon el-icon-info"></i>
+                                </el-tooltip>
+                            </el-col>
+                        </el-row>
+
+                        <!-- 点赞发文日期选择器 -->
+                        <el-row :gutter="0" v-if="likeSwitch==100 && likeCustom==100" style="margin-top: 20px;">
+                            <el-col :offset="5">
+                                发文日期：
+                                <el-select v-model="likeDate" placeholder="请选择日期">
+                                    <el-option
+                                    v-for="item in dateOptions"
+                                    :key="item.value"
+                                    :label="item.label"
+                                    :value="item.value"
+                                    size="mini">
+                                    </el-option>
+                                </el-select>
+                            </el-col>
+                        </el-row>  
+
+                    </el-collapse-item>
+
+                    <el-collapse-item title="评 论" name="2">
+                        <template slot="title">
+                            <div style="text-align: right;margin-left: 39%;">
+                                <i class="iconfont iconpinglun"></i> &nbsp; <span style="font-size:18px">评 论</span>
+                            </div>
+                        </template>
+                        <!-- 评论总开关 -->
+                        <el-row :gutter="0" style="margin-top: 10px;">
+                            <el-col :span="20" :offset="1">
+                                <el-tooltip class="item" effect="dark" content="平台对单位时间评论频率有限制,请注意" placement="right">
+                                    <el-switch
+                                        v-model="commentSwitch"
+                                        active-value="100"
+                                        inactive-value="0"
+                                        active-text="打开自动评论">
+                                    </el-switch>
+                                </el-tooltip>
+                            </el-col>
+                        </el-row>
+
+                        <!-- 评论字数分段开关 -->
+                        <el-row :gutter="0" v-if="commentSwitch==100" style="margin-top: 20px;">
+                            <el-col :span="20" :offset="3">
+                                <el-tooltip class="item" effect="dark" content="将会根据文章字数进行不同的评论" placement="right">
+                                    <el-switch
+                                        v-model="commentRangeSwitch"
+                                        active-value="100"
+                                        inactive-value="0"
+                                        active-text="字数分段">
+                                    </el-switch>
+                                </el-tooltip>
+                            </el-col>
+                        </el-row>
+                        <!-- 评论字数分段滑块 -->
+                        <el-row :gutter="0"  v-if="commentSwitch==100 && commentRangeSwitch==100" style="margin-top: 10px;">
+                            <el-col :span="17" :offset="5">
+                                <el-slider
+                                    v-model="commentRange"
+                                    range
+                                    :min="1"
+                                    :max="10000">
+                                </el-slider>
+                            </el-col>
+                        </el-row>
+
+                        <!-- 评论个性化配置开关 -->
+                        <el-row :gutter="0" v-if="commentSwitch==100" style="margin-top: 20px;">
+                            <el-col :span="20" :offset="3">
+                                <el-tooltip class="item" effect="dark" content="将会对文章字数、阅读量、发布日期进行筛选配置" placement="right">
+                                    <el-switch
+                                        v-model="commentCustom"
+                                        active-value="100"
+                                        inactive-value="0"
+                                        active-text="个性化配置">
+                                    </el-switch>
+                                </el-tooltip>
+                            </el-col>
+                        </el-row>
+
+
+                        <!-- 评论最低字数计数器 -->
+                        <el-row :gutter="0" v-if="commentSwitch==100 && commentCustom==100" style="margin-top: 20px;">
+                            <el-col :span="22" :offset="5">
+                                    <label>最低字数：</label>
+                                    <el-input-number 
+                                        v-model="commentWordNumber" 
+                                        controls-position="right" 
+                                        size="small" 
+                                        :step="100" 
+                                        :min="0" 
+                                        :max="10000"
+                                        :precision="0">
+                                    </el-input-number>
+                                <el-tooltip class="item" effect="dark" content="只评论字数高于这个值的文章" placement="top">
+                                    <i class="header-icon el-icon-info"></i>
+                                </el-tooltip>
+                            </el-col>
+                        </el-row>
+                        <!-- 评论最低浏览量计数器 -->
+                        <el-row :gutter="0" v-if="commentSwitch==100 && commentCustom==100" style="margin-top: 20px;">
+                            <el-col :offset="5">
+                                    <span>最低浏览量：</span>
+                                    <el-input-number 
+                                        v-model="commentReadNumber" 
+                                        controls-position="right" 
+                                        size="small" 
+                                        :step="100" 
+                                        :min="0" 
+                                        :max="10000"
+                                        :precision="0"
+                                        label="最低浏览量">
+                                    </el-input-number>
+                                <el-tooltip class="item" effect="dark" content="只评论阅读量高于这个值的文章" placement="right">    
+                                    <i class="header-icon el-icon-info"></i>
+                                </el-tooltip>
+                            </el-col>
+                        </el-row>
+
+                        <!-- 评论发文日期选择器 -->
+                        <el-row :gutter="0" v-if="commentSwitch==100 && commentCustom==100" style="margin-top: 20px;">
+                            <el-col :offset="5">
+                                发文日期：
+                                <el-select v-model="commentDate" placeholder="请选择日期">
+                                    <el-option
+                                    v-for="item in dateOptions"
+                                    :key="item.value"
+                                    :label="item.label"
+                                    :value="item.value"
+                                    size="mini">
+                                    </el-option>
+                                </el-select>
+                            </el-col>
+                        </el-row>
+
+                        
+
+                    </el-collapse-item>
+                    <!-- 内容模块 -->
+                    <el-collapse-item title="内 容" name="3">
+                        <template slot="title">
+                            <div style="text-align: right;margin-left: 39%;">
+                                <i class="iconfont iconwenben" ></i> &nbsp; <span style="font-size:18px">内 容</span>
+                            </div>
+                        </template>
+                        <el-row type="flex" justify="center" style="margin-top: 10px;">
+                        <el-tabs type="card">
+                            <!-- 随机评论 -->
+                            <el-tab-pane label="随机评论">
+                                <el-alert
+                                    v-if="commentRangeSwitch==100"
+                                    title="当前您使用的是字数分段模式,不会随机评论"
+                                    type="info"
+                                    show-icon
+                                    :closable="false">
+                                </el-alert>
+                                <!-- 随机评论表格 -->
+                                <el-table
+                                    :data="commentList.R.slice((currentPage.R-1)*currentPage.pageSize,currentPage.R*currentPage.pageSize)"
+                                    stripe
+                                    style="width: 100%">
+                                    <el-table-column type="expand">
+                                        <template slot-scope="props">
+                                            <span>{{ props.row.text }}</span>
+                                        </template>
+                                    </el-table-column>
+                                    <el-table-column
+                                        label="评论内容"
+                                        :show-overflow-tooltip='true'
+                                        prop="text">
+                                    </el-table-column>
+                                    <el-table-column  align="right" label="操作">
+                                        <template slot="header" slot-scope="scope">
+                                            <el-button size="mini" type="success" round>导入</el-button>
+                                            <el-button @click="commentNew(0)" size="mini" type="primary" round>新建</el-button>
+                                        </template>
+                                        <template slot-scope="scope">
+                                        <el-button
+                                            size="mini"
+                                            @click="commentEdit(scope.$index, scope.row, 0)">编辑</el-button>
+                                        <el-button
+                                            size="mini"
+                                            type="danger"
+                                            @click="commentDelete(scope.$index, scope.row, 0)">删除</el-button>
+                                        </template>
+                                    </el-table-column>
+                                </el-table>
+                                <!-- 随机评论页码 -->
+                                <el-row :gutter="0" type="flex" justify="center" style="margin-top: 10px;">
+                                    <el-pagination
+                                        background
+                                        layout="prev, pager, next"
+                                        :page-size="currentPage.pageSize"
+                                        @current-change="currentPageChange_R"
+                                        :hide-on-single-page="true"
+                                        :total="commentList.R.length">
+                                    </el-pagination>
+                                </el-row>
+                            </el-tab-pane>
+                            <!-- 少等字数 -->
+                            <el-tab-pane label="少等字数">
+                                <el-alert
+                                    v-if="commentRangeSwitch==0"
+                                    title="在评论里打开字数分段即可使用"
+                                    type="info"
+                                    show-icon
+                                    :closable="false">
+                                </el-alert>
+                                <el-table
+                                :data="commentList.S.slice((currentPage.S-1)*currentPage.pageSize,currentPage.S*currentPage.pageSize)"
+                                stripe
+                                style="width: 100%">
+                                <el-table-column type="expand">
+                                    <template slot-scope="props">
+                                        <span>{{ props.row.text }}</span>
+                                    </template>
+                                </el-table-column>
+                                <el-table-column
+                                    label="评论内容"
+                                    :show-overflow-tooltip='true'
+                                    prop="text">
+                                </el-table-column>
+                                <el-table-column  align="right" label="操作">
+                                    <template slot="header" slot-scope="scope">
+                                        <el-button size="mini" type="success" round>导入</el-button>
+                                        <el-button @click="commentNew(1)" size="mini" type="primary" round>新建</el-button>
+                                      </template>
+                                    <template slot-scope="scope">
+                                      <el-button
+                                        size="mini"
+                                        @click="commentEdit(scope.$index, scope.row, 1)">编辑</el-button>
+                                      <el-button
+                                        size="mini"
+                                        type="danger"
+                                        @click="commentDelete(scope.$index, scope.row, 1)">删除</el-button>
+                                    </template>
+                                </el-table-column>
+                              </el-table>
+                                <el-row :gutter="0" type="flex" justify="center" style="margin-top: 10px;">
+                                    <el-pagination
+                                        background
+                                        layout="prev, pager, next"
+                                        :page-size="currentPage.pageSize"
+                                        @current-change="currentPageChange_S"
+                                        :hide-on-single-page="true"
+                                        :total="commentList.S.length">
+                                    </el-pagination>
+                                </el-row>
+                            </el-tab-pane>
+                            <!-- 中等字数 -->
+                            <el-tab-pane label="中等字数">
+                                <el-alert
+                                    v-if="commentRangeSwitch==0"
+                                    title="在评论里打开字数分段即可使用"
+                                    type="info"
+                                    show-icon
+                                    :closable="false">
+                                </el-alert>
+                                <el-table
+                                :data="commentList.M.slice((currentPage.M-1)*currentPage.pageSize,currentPage.M*currentPage.pageSize)"
+                                stripe
+                                style="width: 100%">
+                                <el-table-column type="expand">
+                                    <template slot-scope="props">
+                                        <span>{{ props.row.text }}</span>
+                                    </template>
+                                </el-table-column>
+                                <el-table-column
+                                    label="评论内容"
+                                    :show-overflow-tooltip='true'
+                                    prop="text">
+                                </el-table-column>
+                                <el-table-column  align="right" label="操作">
+                                    <template slot="header" slot-scope="scope">
+                                        <el-button size="mini" type="success" round>导入</el-button>
+                                        <el-button @click="commentNew(2)" size="mini" type="primary" round>新建</el-button>
+                                      </template>
+                                    <template slot-scope="scope">
+                                      <el-button
+                                        size="mini"
+                                        @click="commentEdit(scope.$index, scope.row, 2)">编辑</el-button>
+                                      <el-button
+                                        size="mini"
+                                        type="danger"
+                                        @click="commentDelete(scope.$index, scope.row, 2)">删除</el-button>
+                                    </template>
+                                </el-table-column>
+                              </el-table>
+                                <el-row :gutter="0" type="flex" justify="center" style="margin-top: 10px;">
+                                    <el-pagination
+                                        background
+                                        layout="prev, pager, next"
+                                        :page-size="currentPage.pageSize"
+                                        @current-change="currentPageChange_M"
+                                        :hide-on-single-page="true"
+                                        :total="commentList.M.length">
+                                    </el-pagination>
+                                </el-row>
+                            </el-tab-pane>
+                            <!-- 多等字数 -->
+                            <el-tab-pane label="多等字数">
+                                <el-alert
+                                    v-if="commentRangeSwitch==0"
+                                    title="在评论里打开字数分段即可使用"
+                                    type="info"
+                                    show-icon
+                                    :closable="false">
+                                </el-alert>
+                                <el-table
+                                :data="commentList.L.slice((currentPage.L-1)*currentPage.pageSize,currentPage.L*currentPage.pageSize)"
+                                stripe
+                                style="width: 100%">
+                                <el-table-column type="expand">
+                                    <template slot-scope="props">
+                                        <span>{{ props.row.text }}</span>
+                                    </template>
+                                </el-table-column>
+                                <el-table-column
+                                    label="评论内容"
+                                    :show-overflow-tooltip='true'
+                                    prop="text">
+                                </el-table-column>
+                                <el-table-column  align="right" label="操作">
+                                    <template slot="header" slot-scope="scope">
+                                        <el-button size="mini" type="success" round>导入</el-button>
+                                        <el-button @click="commentNew(3)" size="mini" type="primary" round>新建</el-button>
+                                      </template>
+                                    <template slot-scope="scope">
+                                      <el-button
+                                        size="mini"
+                                        @click="commentEdit(scope.$index, scope.row, 3)">编辑</el-button>
+                                      <el-button
+                                        size="mini"
+                                        type="danger"
+                                        @click="commentDelete(scope.$index, scope.row, 3)">删除</el-button>
+                                    </template>
+                                </el-table-column>
+                              </el-table>
+                                <el-row :gutter="0" type="flex" justify="center" style="margin-top: 10px;">
+                                    <el-pagination
+                                        background
+                                        layout="prev, pager, next"
+                                        :page-size="currentPage.pageSize"
+                                        @current-change="currentPageChange_L"
+                                        :hide-on-single-page="true"
+                                        :total="commentList.L.length">
+                                    </el-pagination>
+                                </el-row>
+                            </el-tab-pane>
+                          </el-tabs>
+                        </el-row>
+                    </el-collapse-item>
+                    <!-- 模式配置模块 -->
+                    <el-collapse-item title="模 式" name="4">
+                        <template slot="title">
+                            <div  style="text-align: right;margin-left: 39%;">
+                                <i class="iconfont iconqiapianmoshi_kuai" ></i> &nbsp; <span style="font-size:18px">模 式</span>
+                            </div>
+                        </template>
+                        <el-row :gutter="0" style="margin-top: 20px;">
+                            <el-col :offset="1">
+                                模式正在开发中
+                            </el-col>
+                        </el-row>
+                    </el-collapse-item>
+                    <!-- 关于模块 -->
+                    <el-collapse-item title="关 于" name="5">
+                        <template slot="title">
+                            <div  style="text-align: right;margin-left: 39%;">
+                                <i class="iconfont icon093info" ></i> &nbsp; <span style="font-size:18px">关 于</span>
+                            </div>
+                        </template>
+                        <el-row :gutter="0" style="margin-top: 20px;">
+                            <el-col :offset="1">
+                                版本：1.0
+                            </el-col>
+                        </el-row>
+                        <el-row :gutter="0" style="margin-top: 10px;">
+                            <el-col :offset="1">
+                                如果觉得这个插件不错,欢迎给个Star
+                            </el-col>
+                        </el-row>
+                        <el-row :gutter="0" style="margin-top: 15px;">
+                            <el-col :offset="2">
+                                GitHub:
+                                <el-link :underline="false" href="https://github.com/superBoyJack">
+                                    <i class="iconfont icongithublogo" style="font-size: 30px;"></i>
+                                </el-link>
+                            </el-col>
+                        </el-row>
+                        
+                    </el-collapse-item>
+                    </el-collapse>
+            </el-main>
+            
+            <el-footer style="text-align:center;">
+                <el-button type="primary" @click="postChange()">保 存</el-button>
+            </el-footer>
+        
+        </el-container>
+        
+    </el-drawer>
+
+    <!-- 编辑评论框 -->
+    <el-dialog
+        :title="commentDialog.title"
+        :visible.sync="commentDialog.visible"
+        :close-on-click-modal="false"
+        :close-on-press-escape="false"
+        width="40%"
+        center>
+        <el-input
+            type="textarea"
+            :autosize="{ minRows: 2, maxRows: 4}"
+            placeholder="请输入自定义评价"
+            maxlength="1000"
+            minlength="1"
+            show-word-limit
+            v-model="commentDialog.text">
+        </el-input>
+        <span slot="footer" class="dialog-footer">
+            <el-button @click="commentDialog.visible = false">取 消</el-button>
+            <el-button type="primary" @click="postComment()" :disabled="commentDialog.checkDisabled()">保存</el-button>
+        </span>
+    </el-dialog>
+
+</div>
