@@ -1,6 +1,6 @@
 <p align="center">
     <img src="https://cdn.jsdelivr.net/gh/superBoyJack/CSDN-helper/img/cover.png"
-        height="300">
+        height="310">
 </p>
 <p align="center">
     <a href="https://github.com/superBoyJack/CSDN-helper/releases"><img alt="Version" src="https://img.shields.io/badge/release-0.2-blue"/></a>
