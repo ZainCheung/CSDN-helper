@@ -34,12 +34,9 @@
 ## [Tampermonkey](https://tampermonkey.net/) / [Violentmonkey](https://violentmonkey.github.io/)
 完全兼容, 但在较旧的浏览器中 Violentmonkey 可能无法运行此脚本.
 
-## [Greasemonkey](https://www.greasespot.net/)
-可以安装, 但是由于 Greasemonkey 4 只允许脚本在页面完全加载后运行, 样式相关功能体验会比较糟糕, 比如打开夜间模式后每个页面在完全加载之前都是亮色的. 所以还是强烈建议您使用上述的两种脚本管理器.
+CSDN-helper: 点击名称即可安装👇
 
-点击名称即可安装👇
-
-| [正式版](https://greasyfork.org/scripts/401373-csdn%E5%8D%9A%E5%AE%A2%E8%87%AA%E5%8A%A8%E7%82%B9%E8%B5%9E%E8%AF%84%E8%AE%BA/code/CSDN%E5%8D%9A%E5%AE%A2%E8%87%AA%E5%8A%A8%E7%82%B9%E8%B5%9E%E8%AF%84%E8%AE%BA.user.js)                                      | [GitHub版](https://cdn.jsdelivr.net/gh/superBoyJack/CSDN-helper/dist/CSDN-helper@0.4.user.js)                                     |
+| [正式版](https://greasyfork.org/scripts/401373-csdn%E5%8D%9A%E5%AE%A2%E8%87%AA%E5%8A%A8%E7%82%B9%E8%B5%9E%E8%AF%84%E8%AE%BA/code/CSDN%E5%8D%9A%E5%AE%A2%E8%87%AA%E5%8A%A8%E7%82%B9%E8%B5%9E%E8%AF%84%E8%AE%BA.user.js)                                      | [GitHub版](https://cdn.jsdelivr.net/gh/superBoyJack/CSDN-helper/dist/CSDN-helper@1.0.user.js)                                     |
 | -------------------------------------------- | -------------------------------------------- |
 | 在油猴上正式发布的版本, 最稳定, 更新频率较低 | 新增内容测试的地方, 更新频率高, 但功能不稳定 |
 
