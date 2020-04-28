@@ -1,8 +1,12 @@
+### 评论库：helloWorld
+
+### 作者：ZainCheung
+
 ### 类别：所有
 
 ### 条目：28
 
-### 导入链接：[https://cdn.jsdelivr.net/gh/superBoyJack/CSDN-helper/market/file/HelloWorld.json](https://cdn.jsdelivr.net/gh/superBoyJack/CSDN-helper/market/file/HelloWorld.json)
+### 导入链接：[https://cdn.jsdelivr.net/gh/superBoyJack/CSDN-helper/market/file/helloWorld@1.0.json](https://cdn.jsdelivr.net/gh/superBoyJack/CSDN-helper/market/file/helloWorld@1.0.json)
 
 #### 随机：
 
