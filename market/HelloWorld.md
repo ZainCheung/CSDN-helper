@@ -2,7 +2,7 @@
 
 ### 条目：28
 
-### 导入链接：[https://cdn.jsdelivr.net/gh/superBoyJack/CSDN-helper/market/file/hello.json](https://cdn.jsdelivr.net/gh/superBoyJack/CSDN-helper/market/file/hello.json)
+### 导入链接：[https://cdn.jsdelivr.net/gh/superBoyJack/CSDN-helper/market/file/HelloWorld.json](https://cdn.jsdelivr.net/gh/superBoyJack/CSDN-helper/market/file/HelloWorld.json)
 
 #### 随机：
 
