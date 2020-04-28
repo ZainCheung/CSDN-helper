@@ -1,0 +1,43 @@
+/* 悬浮入口 */
+.el-backtop {
+    transform: translateX(-16px);
+    transition: .2s;
+    top: 50%;
+    border-radius: 50%;
+}
+.el-backtop:hover {
+    left: 0px;
+    transform: translateX(0);
+}
+/* 抽屉面板加滑动 */
+.el-drawer{
+    overflow-y: scroll
+}
+.el-main {
+    padding: 20px 0 20px 0;
+}
+/* 开关标签颜色 */
+.el-switch__label.is-active {
+    color: #606266;
+}
+/* 标题下拉箭头 */
+.el-collapse-item__arrow {
+    /* margin: 0 165px 0 10px; */
+    margin-right: 40%;
+}
+/* 滚动槽 */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background: rgba(0,0,0,0.06);
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.08);
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: rgba(0,0,0,0.12);
+    -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+}
