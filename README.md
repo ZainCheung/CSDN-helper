@@ -19,7 +19,7 @@
 
 [🐛 版本历史与更新日志](https://github.com/superBoyJack/CSDN-helper/releases)
 
-[📖 使用文档](https://github.com/superBoyJack/CSDN-helper/wiki)
+[📖 使用文档](https://superboyjack.github.io/CSDN-helper)
 
 [👻 责任说明](#责任说明)
 
