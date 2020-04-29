@@ -13,13 +13,11 @@
 
 [:octocat: 安装](#安装)
 
-[🔑 使用方法](#使用方法)
-
 [📚 功能](#功能)
 
-[🐛 版本历史与更新日志](https://github.com/superBoyJack/CSDN-helper/releases)
-
 [📖 使用文档](https://superboyjack.github.io/CSDN-helper)
+
+[🐛 版本历史与更新日志](https://github.com/superBoyJack/CSDN-helper/releases)
 
 [👻 责任说明](#责任说明)
 
@@ -29,25 +27,28 @@
 可以选定点赞评论的范围，比如文章字数，浏览数或者文章的发布日期等等
 
 # 安装
-需要浏览器拥有[Tampermonkey](https://tampermonkey.net/)插件.
 
-## [Tampermonkey](https://tampermonkey.net/) / [Violentmonkey](https://violentmonkey.github.io/)
-完全兼容, 但在较旧的浏览器中 Violentmonkey 可能无法运行此脚本.
+安装并使用这款插件，需要完成两个步骤
 
-CSDN-helper: 点击名称即可安装👇
+## 一、需要浏览器拥有[Tampermonkey](https://tampermonkey.net/)插件.
 
-| [正式版](https://greasyfork.org/scripts/401373-csdn%E5%8D%9A%E5%AE%A2%E8%87%AA%E5%8A%A8%E7%82%B9%E8%B5%9E%E8%AF%84%E8%AE%BA/code/CSDN%E5%8D%9A%E5%AE%A2%E8%87%AA%E5%8A%A8%E7%82%B9%E8%B5%9E%E8%AF%84%E8%AE%BA.user.js)                                      | [GitHub版](https://cdn.jsdelivr.net/gh/superBoyJack/CSDN-helper/dist/CSDN-helper@1.1.0.user.js)                                     |
-| -------------------------------------------- | -------------------------------------------- |
-| 在油猴上正式发布的版本, 最稳定, 更新频率较低 | 新增内容测试的地方, 更新频率高, 但功能不稳定 |
+### [Tampermonkey](https://tampermonkey.net/) / [Violentmonkey](https://violentmonkey.github.io/)
+如果你的电脑无法**科学上网**，那么我们为你准备了备用的下载地址：[无需翻墙即可下载](https://lanzous.com/ic2m7pi)
+
+*下载后得到一个crx文件，使用了Chromium内核的浏览器打开右上角更多 > 更多工具 > 扩展程序，接着将crx文件拖入浏览器即可安装*
+
+如需科学上网，我们也为你准备了传送门：[谷歌访问助手](https://lanzous.com/iax4lyh)
+
+## 二、**CSDN-helper**：点击名称即可安装👇
+
+| [正式版](https://greasyfork.org/scripts/401373-csdn%E5%8D%9A%E5%AE%A2%E8%87%AA%E5%8A%A8%E7%82%B9%E8%B5%9E%E8%AF%84%E8%AE%BA/code/CSDN%E5%8D%9A%E5%AE%A2%E8%87%AA%E5%8A%A8%E7%82%B9%E8%B5%9E%E8%AF%84%E8%AE%BA.user.js) | [GitHub版](https://cdn.jsdelivr.net/gh/superBoyJack/CSDN-helper/dist/CSDN-helper@1.1.0.user.js) |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
+|         在油猴上正式发布的版本, 最稳定, 更新频率较低         |         新增内容测试的地方, 更新频率高, 但功能不稳定         |
 
 > 使用过程中脚本管理器可能会提示"脚本试图访问跨域资源", 请选择"始终允许".
 
 > 某些破坏性的大更新会使旧版脚本**完全**无法运行, 请及时检查更新.
 
-# 使用方法
-安装脚本后,打开任意一篇CSDN博客文章页面,屏幕左边会出现齿轮标识,点进去进行配置.
-
-大多数设置, 需要保存后并刷新网页才能生效. 只有自定义的评论可以立即保存.
 
 **本脚本的点赞评论均需要在登陆之后的环境下进行，否则没反应属于正常**
 
