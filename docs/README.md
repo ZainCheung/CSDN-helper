@@ -20,12 +20,18 @@
 可以选定点赞评论的范围，比如文章字数，浏览数或者文章的发布日期等等
 
 # 安装
-需要浏览器拥有[Tampermonkey](https://tampermonkey.net/)插件.
+安装并使用这款插件，需要完成两个步骤
 
-## [Tampermonkey](https://tampermonkey.net/) / [Violentmonkey](https://violentmonkey.github.io/)
-完全兼容, 但在较旧的浏览器中 Violentmonkey 可能无法运行此脚本.
+## 一、需要浏览器拥有[Tampermonkey](https://tampermonkey.net/)插件.
 
-**CSDN-helper**：点击名称即可安装👇
+### [Tampermonkey](https://tampermonkey.net/) / [Violentmonkey](https://violentmonkey.github.io/)
+如果你的电脑无法**科学上网**，那么我们为你准备了备用的下载地址：[无需翻墙即可下载](https://lanzous.com/ic2m7pi)
+
+*下载后得到一个crx文件，使用了Chromium内核的浏览器打开右上角更多 > 更多工具 > 扩展程序，接着将crx文件拖入浏览器即可安装*
+
+如需科学上网，我们也为你准备了传送门：[谷歌访问助手](https://lanzous.com/iax4lyh)
+
+## 二、**CSDN-helper**：点击名称即可安装👇
 
 | [正式版](https://greasyfork.org/scripts/401373-csdn%E5%8D%9A%E5%AE%A2%E8%87%AA%E5%8A%A8%E7%82%B9%E8%B5%9E%E8%AF%84%E8%AE%BA/code/CSDN%E5%8D%9A%E5%AE%A2%E8%87%AA%E5%8A%A8%E7%82%B9%E8%B5%9E%E8%AF%84%E8%AE%BA.user.js) | [GitHub版](https://cdn.jsdelivr.net/gh/superBoyJack/CSDN-helper/dist/CSDN-helper@1.1.0.user.js) |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
