@@ -36,7 +36,7 @@
 
 CSDN-helper: 点击名称即可安装👇
 
-| [正式版](https://greasyfork.org/scripts/401373-csdn%E5%8D%9A%E5%AE%A2%E8%87%AA%E5%8A%A8%E7%82%B9%E8%B5%9E%E8%AF%84%E8%AE%BA/code/CSDN%E5%8D%9A%E5%AE%A2%E8%87%AA%E5%8A%A8%E7%82%B9%E8%B5%9E%E8%AF%84%E8%AE%BA.user.js)                                      | [GitHub版](https://cdn.jsdelivr.net/gh/superBoyJack/CSDN-helper/dist/CSDN-helper@1.0.user.js)                                     |
+| [正式版](https://greasyfork.org/scripts/401373-csdn%E5%8D%9A%E5%AE%A2%E8%87%AA%E5%8A%A8%E7%82%B9%E8%B5%9E%E8%AF%84%E8%AE%BA/code/CSDN%E5%8D%9A%E5%AE%A2%E8%87%AA%E5%8A%A8%E7%82%B9%E8%B5%9E%E8%AF%84%E8%AE%BA.user.js)                                      | [GitHub版](https://cdn.jsdelivr.net/gh/superBoyJack/CSDN-helper/dist/CSDN-helper@1.1.0.user.js)                                     |
 | -------------------------------------------- | -------------------------------------------- |
 | 在油猴上正式发布的版本, 最稳定, 更新频率较低 | 新增内容测试的地方, 更新频率高, 但功能不稳定 |
 
