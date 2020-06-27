@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         CSDN博客自动点赞评论助手
+// @name         CSDN博客刷积分刷等级助手
 // @namespace    http://tampermonkey.net/
-// @version      1.1.3
-// @description  打开任意一个CSDN博客页面,就可以进行自动点赞评论,可以自定义策略与评论内容,高度可定制化
+// @version      1.1.4
+// @description  打开任意一个CSDN博客页面,就可以进行自动点赞评论,可以涨积分升级,可以自定义策略与评论内容,高度可定制化
 // @author       ZainCheung
 // @match        *://blog.csdn.net/*/article/details/*
 // @grant        GM.xmlHttpRequest
@@ -16,7 +16,7 @@
 // @grant        GM.setValue
 // @grant        unsafeWindow
 // @grant  GM_getResourceText
-// @icon         https://cdn.jsdelivr.net/gh/superBoyJack/CDN/img/20200428232059.png
+// @icon         https://cdn.jsdelivr.net/gh/ZainCheung/CDN/img/20200428232059.png
 // ==/UserScript==
         
         // 获取网页的网址
