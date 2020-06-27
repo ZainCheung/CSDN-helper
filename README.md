@@ -15,9 +15,9 @@
 
 [📚 功能](#功能)
 
-[📖 使用文档](https://superboyjack.github.io/CSDN-helper)
+[📖 使用文档](https://zaincheung.github.io/CSDN-helper/)
 
-[🐛 版本历史与更新日志](https://github.com/superBoyJack/CSDN-helper/releases)
+[🐛 版本历史与更新日志](https://github.com/ZainCheung/CSDN-helper/releases)
 
 [👻 责任说明](#责任说明)
 
