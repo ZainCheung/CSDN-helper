@@ -7,7 +7,7 @@
         height="310">
 </p>
 <p align="center">
-    <a href="https://github.com/superBoyJack/CSDN-helper/releases"><img alt="Version" src="https://img.shields.io/badge/release-0.2-blue"/></a>
+    <a href="https://github.com/ZainCheung/CSDN-helper/releases"><img alt="Version" src="https://img.shields.io/badge/release-1.1.5-blue"/></a>
 <a href="https://superboyjack.github.io/"><img alt="Author" src="https://img.shields.io/badge/author-ZainCheung-blueviolet"/></a>
   <a href="https://cn.vuejs.org/"><img alt="Vue" src="https://img.shields.io/badge/vue-2.6.11-success"/></a>
   <a href="https://element.eleme.cn/#/zh-CN/"><img alt="Element" src="https://img.shields.io/badge/element-2.13.0-blue"/></a>
@@ -15,7 +15,7 @@
 
 
 # 简介
-这是一款可以全自动点赞评论的插件，进入到CSDN博客页面后便可以自动点赞评论
+这是一款可以全自动点赞评论刷积分刷等级的插件，进入到CSDN博客页面后便可以自动点赞评论
 
 可以选定点赞评论的范围，比如文章字数，浏览数或者文章的发布日期等等
 
@@ -51,7 +51,7 @@
 CSDN的新界面对应的助手正在适配中
 
 # 功能
-1. 对于自己的文章不会评论
+1. 快速刷积分刷等级
 2. 当天点赞次数用尽之后会帮你关闭自动点赞
 3. 评论的内容你来提前设定,此后便会随机抽选一条内容评论
 4. 纯模拟用户操作,安全并且不会引发账号异常
