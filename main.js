@@ -7,9 +7,9 @@
 // @match        *://blog.csdn.net/*/article/details/*
 // @grant        GM.xmlHttpRequest
 // @connect      csdn.net
-// @resource html      https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper/dist/app.html
-// @resource css      https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper/dist/app.css
-// @resource js      https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper/dist/app.js
+// @resource html      https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper/dist/app@1.0.html
+// @resource css      https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper/dist/app@1.0.css
+// @resource js      https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper/dist/app@1.0.js
 // @grant        GM_getValue
 // @grant        GM_setValue
 // @grant        GM.getValue
@@ -157,7 +157,7 @@ function addGlobalScript(src) {
 
 addGlobalLink('stylesheet','https://cdn.jsdelivr.net/gh/ZainCheung/CDN/css/element-ui-index.css');
 addGlobalLink('stylesheet','https://at.alicdn.com/t/font_1776564_biuc05tmt1k.css');
-addGlobalLink('stylesheet','https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper/dist/app.css');
+addGlobalLink('stylesheet','https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper/dist/app@1.0.css');
 addGlobalScript("https://cdn.jsdelivr.net/gh/ZainCheung/CDN/js/element-ui-index.js");
 addGlobalScript("https://cdn.jsdelivr.net/npm/vue");
 addGlobalScript("https://unpkg.com/axios/dist/axios.min.js");
