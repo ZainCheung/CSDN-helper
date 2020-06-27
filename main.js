@@ -1,15 +1,15 @@
 // ==UserScript==
 // @name         CSDN博客刷积分刷等级助手
 // @namespace    http://tampermonkey.net/
-// @version      1.1.4
+// @version      1.1.5
 // @description  打开任意一个CSDN博客页面,就可以进行自动点赞评论,可以涨积分升级,可以自定义策略与评论内容,高度可定制化
 // @author       ZainCheung
 // @match        *://blog.csdn.net/*/article/details/*
 // @grant        GM.xmlHttpRequest
 // @connect      csdn.net
-// @resource html      https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper/dist/app@1.0.html
-// @resource css      https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper/dist/app@1.0.css
-// @resource js      https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper/dist/app@1.0.js
+// @resource html      https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper/dist/app.html
+// @resource css      https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper/dist/app.css
+// @resource js      https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper/dist/app.js
 // @grant        GM_getValue
 // @grant        GM_setValue
 // @grant        GM.getValue
@@ -157,7 +157,7 @@ function addGlobalScript(src) {
 
 addGlobalLink('stylesheet','https://cdn.jsdelivr.net/gh/ZainCheung/CDN/css/element-ui-index.css');
 addGlobalLink('stylesheet','https://at.alicdn.com/t/font_1776564_biuc05tmt1k.css');
-addGlobalLink('stylesheet','https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper/dist/app@0.2.css');
+addGlobalLink('stylesheet','https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper/dist/app.css');
 addGlobalScript("https://cdn.jsdelivr.net/gh/ZainCheung/CDN/js/element-ui-index.js");
 addGlobalScript("https://cdn.jsdelivr.net/npm/vue");
 addGlobalScript("https://unpkg.com/axios/dist/axios.min.js");
