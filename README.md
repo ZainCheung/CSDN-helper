@@ -3,7 +3,7 @@
         height="310">
 </p>
 <p align="center">
-    <a href="https://github.com/superBoyJack/CSDN-helper/releases"><img alt="Version" src="https://img.shields.io/badge/release-1.1.4-blue"/></a>
+    <a href="https://github.com/superBoyJack/CSDN-helper/releases"><img alt="Version" src="https://img.shields.io/badge/release-1.1.5-blue"/></a>
 <a href="https://superboyjack.github.io/"><img alt="Author" src="https://img.shields.io/badge/author-ZainCheung-blueviolet"/></a>
   <a href="https://cn.vuejs.org/"><img alt="Vue" src="https://img.shields.io/badge/vue-2.6.11-success"/></a>
   <a href="https://element.eleme.cn/#/zh-CN/"><img alt="Element" src="https://img.shields.io/badge/element-2.13.0-blue"/></a>
