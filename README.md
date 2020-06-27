@@ -3,7 +3,7 @@
         height="310">
 </p>
 <p align="center">
-    <a href="https://github.com/superBoyJack/CSDN-helper/releases"><img alt="Version" src="https://img.shields.io/badge/release-0.2-blue"/></a>
+    <a href="https://github.com/superBoyJack/CSDN-helper/releases"><img alt="Version" src="https://img.shields.io/badge/release-1.1.4-blue"/></a>
 <a href="https://superboyjack.github.io/"><img alt="Author" src="https://img.shields.io/badge/author-ZainCheung-blueviolet"/></a>
   <a href="https://cn.vuejs.org/"><img alt="Vue" src="https://img.shields.io/badge/vue-2.6.11-success"/></a>
   <a href="https://element.eleme.cn/#/zh-CN/"><img alt="Element" src="https://img.shields.io/badge/element-2.13.0-blue"/></a>
@@ -22,26 +22,15 @@
 [👻 责任说明](#责任说明)
 
 # 简介
-这是一款可以全自动点赞评论的插件，进入到CSDN博客页面后便可以自动点赞评论
+这是一款可以全自动点赞评论刷积分刷等级的插件，进入到CSDN博客页面后便可以自动点赞评论
 
 可以选定点赞评论的范围，比如文章字数，浏览数或者文章的发布日期等等
 
 # 安装
 
-安装并使用这款插件，需要完成两个步骤
+安装并使用这款插件，需要你的浏览器装有油猴[Tampermonkey](https://tampermonkey.net/)插件
 
-## 一、需要浏览器拥有[Tampermonkey](https://tampermonkey.net/)插件.
-
-### [Tampermonkey](https://tampermonkey.net/) / [Violentmonkey](https://violentmonkey.github.io/)
-如果你的电脑无法**科学上网**，那么我们为你准备了备用的下载地址：[无需翻墙即可下载](https://lanzous.com/ic2m7pi)
-
-*下载后得到一个crx文件，使用了Chromium内核的浏览器打开右上角更多 > 更多工具 > 扩展程序，接着将crx文件拖入浏览器即可安装*
-
-如需科学上网，我们也为你准备了传送门：[谷歌访问助手](https://lanzous.com/iax4lyh)
-
-## 二、**CSDN-helper**：点击名称即可安装👇
-
-| [正式版](https://greasyfork.org/scripts/401373-csdn%E5%8D%9A%E5%AE%A2%E8%87%AA%E5%8A%A8%E7%82%B9%E8%B5%9E%E8%AF%84%E8%AE%BA/code/CSDN%E5%8D%9A%E5%AE%A2%E8%87%AA%E5%8A%A8%E7%82%B9%E8%B5%9E%E8%AF%84%E8%AE%BA.user.js) | [GitHub版](https://cdn.jsdelivr.net/gh/superBoyJack/CSDN-helper/dist/CSDN-helper@1.1.0.user.js) |
+| [正式版](https://greasyfork.org/zh-CN/scripts/401373-csdn%E5%8D%9A%E5%AE%A2%E5%88%B7%E7%A7%AF%E5%88%86%E5%88%B7%E7%AD%89%E7%BA%A7%E5%8A%A9%E6%89%8B) | [GitHub版](https://cdn.jsdelivr.net/gh/superBoyJack/CSDN-helper/main.js) |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
 |         在油猴上正式发布的版本, 最稳定, 更新频率较低         |         新增内容测试的地方, 更新频率高, 但功能不稳定         |
 
@@ -53,7 +42,7 @@
 **本脚本的点赞评论均需要在登陆之后的环境下进行，否则没反应属于正常**
 
 # 功能
-1. 对于自己的文章不会评论
+1. 快速刷积分刷等级
 2. 当天点赞次数用尽之后会帮你关闭自动点赞
 3. 评论的内容你来提前设定,此后便会随机抽选一条内容评论
 4. 纯模拟用户操作,安全并且不会引发账号异常
