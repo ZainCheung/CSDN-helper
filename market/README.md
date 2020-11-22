@@ -12,5 +12,6 @@
 
 |                     作者                      |                             预览                             | 类别 | 条目 |
 | :-------------------------------------------: | :----------------------------------------------------------: | :--: | :--: |
-| [ZainCheung](https://github.com/superBoyJack) | [helloWorld](https://github.com/superBoyJack/CSDN-helper/blob/master/market/helloWorld.md) | 所有 |  28  |
+| [ZainCheung](https://github.com/superBoyJack) | [helloWorld](https://github.com/ZainCheung/CSDN-helper/blob/master/market/helloWorld.md) | 所有 |  28  |
+| [ZainCheung](https://github.com/superBoyJack) | [马保国](https://github.com/ZainCheung/CSDN-helper/blob/master/market/马保国.md) | 随机 |  1   |
 
