@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CSDN博客刷积分刷等级助手
 // @namespace    http://tampermonkey.net/
-// @version      1.1.5
+// @version      1.1.8
 // @description  打开任意一个CSDN博客页面,就可以进行自动点赞评论,可以涨积分升级,可以自定义策略与评论内容,高度可定制化
 // @author       ZainCheung
 // @match        *://blog.csdn.net/*/article/details/*
@@ -26,7 +26,7 @@
         // 组装评论请求
         var getCommentUrl = host + "phoenix/comment/list/" + artId + "?page=1&size=1000&tree_type=1";
         // 当前登陆用户的账号
-        var myName = document.querySelector("#csdn_container_tool > div > ul > li:nth-child(6) > div.userControl > div:nth-child(2) > div:nth-child(1) > a").href.split("blog.csdn.net/")[1];
+        var myName = document.querySelector("#csdn-toolbar > div > div > div.toolbar-container-right > div > div.toolbar-btn.toolbar-btn-login.csdn-toolbar-fl.toolbar-subMenu-box > a").href.split("blog.csdn.net/")[1];
         // 文章的作者账号
         var UserName = document.querySelector("#mainBox > main > div.blog-content-box > div > div > div.article-info-box > div.article-bar-top > div > a.follow-nickName").href.split("csdn.net/")[1];
         // 文章全文字数
@@ -111,23 +111,32 @@
         }
 
          setTimeout(function(){
-             // 从页面获取评论列表,但是只能获取第一页
-             var commentList = document.querySelectorAll('#mainBox > main > div.comment-box > div.comment-list-container > div.comment-list-box > ul');
-             for (let i=0; i<commentList.length; i++){
-            // 在页面的评论列表找到当前登陆用户账号
-            if(commentList[i].querySelector("li > a").href.split("csdn.net/")[1]==myName){
-                toComment = false;
-                console.log("已经评论过,无需重复评论");
-            }
-            if(i==(commentList.length-1)){
-                if(toComment && myName!=UserName){
-                console.log(commentText);
-                document.querySelector("#comment_content").value= commentText;
-                document.querySelector("#commentform > div > div.right-box > a > input").click();
-                console.log("评论成功!");
-                }
-            }
-        }
+             if(myName!=UserName){
+                 // 从页面获取评论列表,但是只能获取第一页
+                 var commentList = document.querySelector('#mainBox > main > div.comment-box > div.comment-list-container > div.comment-list-box');
+                     if(commentList==null){
+                             console.log(commentText);
+                             document.querySelector("#comment_content").value= commentText;
+                             document.querySelector("#commentform > div > div.right-box > a > input").click();
+                             console.log("评论成功!");
+                     }else{
+                         var Imgs = commentList.getElementsByClassName("avatar");
+                         for (let i=0; i<commentList.getElementsByTagName("li").length; i++){
+                             // 在页面的评论列表找到当前登陆用户账号
+                             if(Imgs[i].alt==myName){
+                                 toComment = false;
+                                 console.log("已经评论过,无需重复评论");
+                                 break;
+                             }
+                         }
+                         if(toComment ){
+                             console.log(commentText);
+                             document.querySelector("#comment_content").value= commentText;
+                             document.querySelector("#commentform > div > div.right-box > a > input").click();
+                             console.log("评论成功!");
+                         }
+                     }
+             }
        },500);
     }
 
