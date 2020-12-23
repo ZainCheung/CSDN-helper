@@ -544,6 +544,11 @@
                             <el-card shadow="hover">条目：{{ importDialog.commentList.count }}</el-card>
                         </el-col>
                     </el-row>
+                    <el-row :gutter="12" v-if="importDialog.commentList.version">
+                        <el-col :span="24">
+                            <el-card shadow="hover">版本：{{ importDialog.commentList.version }}</el-card>
+                        </el-col>
+                    </el-row>
                 </template>
             <template v-else>
                 <el-input

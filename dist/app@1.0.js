@@ -234,6 +234,7 @@ var Main = {
             this.importDialog.footer = "查询";
             this.importDialog.visible = true;
         },
+        /* 导入评论 */
         commentImport(){
             if(!this.importDialog.commentList.type){return}
             switch (this.importDialog.commentList.type) {
