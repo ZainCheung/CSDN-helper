@@ -1,13 +1,13 @@
-## 评论市场
+# 评论市场
 
 * 评论市场提供评论模板，可以快速导入到你的插件中
 * 欢迎提交你的评论库到评论市场
 
-### 使用方法
+## 使用方法
 
 找到你感兴趣的评论，可浏览内容，可复制链接导入进你的插件
 
-### 所有评论
+## 所有评论
 
 |                    作者                     |                             预览                             | 类别 | 条目 | 版本 |                           导入链接                           |
 | :-----------------------------------------: | :----------------------------------------------------------: | :--: | :--: | ---- | :----------------------------------------------------------: |
@@ -15,17 +15,17 @@
 | [ZainCheung](https://github.com/ZainCheung) | [马保国](https://github.com/ZainCheung/CSDN-helper/blob/master/market/马保国.md) | 随机 |  1   | 1.0  | **[https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper/market/file/ZainCheung/马保国/马保国@1.0.json](https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper/market/file/ZainCheung/马保国/马保国@1.0.json)** |
 | [ZainCheung](https://github.com/ZainCheung) | [网友评论](https://github.com/ZainCheung/CSDN-helper/blob/master/market/网友评论.md) | 随机 |  13  | 1.0  | **[https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper/market/file/ZainCheung/网友评论/网友评论@1.0.json](https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper/market/file/ZainCheung/网友评论/网友评论@1.0.json)** |
 
-### 加入我们
+## 加入我们
 
-欢迎参与开源项目，为开源贡献自己的一份力量。
+欢迎参与开源项目，提交自己制作的评论库，为开源贡献自己的一份力量。
 
-#### 提交流程：
+### 提交流程：
 
 1. 在项目的`market`目录下新建一个以你的名字（用户名或者花名都可以）为名的文件夹，里面存放的就是你的评论库。
 2. 为每个库建立一个独立的文件夹，以评论库名命名，库下面放置的是各个版本的json文件以及一个README文件。
 3. 提交到项目，作者会帮你更新到主页面列表中。
 
-#### json结构：
+### json结构：
 
 ```json
 {
@@ -67,7 +67,7 @@
 
 评论内容：从示例中可以看到，在`R`列表里面有2条评论
 
-#### README结构
+### README结构
 
 ```
 ### 评论库：评论库名 
