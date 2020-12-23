@@ -10,7 +10,7 @@
 
 ## 案例
 
-链接：https://cdn.jsdelivr.net/gh/superBoyJack/CSDN-helper/market/file/ZainCheung/HelloWorld/helloWorld@1.0.json
+链接：https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper@master/market/ZainCheung/HelloWorld/HelloWorld@1.0.json
 
 文件信息：
 
