@@ -11,9 +11,9 @@
 
 |                    作者                     |                             预览                             | 类别 | 条目 | 版本 |                           导入链接                           |
 | :-----------------------------------------: | :----------------------------------------------------------: | :--: | :--: | ---- | :----------------------------------------------------------: |
-| [ZainCheung](https://github.com/ZainCheung) | [helloWorld](https://github.com/ZainCheung/CSDN-helper/blob/master/market/ZainCheung/HelloWorld/helloWorld.md) | 所有 |  28  | 1.0  | **[https://cdn.jsdelivr.net/gh/superBoyJack/CSDN-helper/market/file/ZainCheung/HelloWorld/helloWorld@1.0.json](https://cdn.jsdelivr.net/gh/superBoyJack/CSDN-helper/market/file/ZainCheung/HelloWorld/helloWorld@1.0.json)** |
-| [ZainCheung](https://github.com/ZainCheung) | [马保国](https://github.com/ZainCheung/CSDN-helper/blob/master/market/ZainCheung/马保国/马保国.md) | 随机 |  1   | 1.0  | **[https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper/market/file/ZainCheung/马保国/马保国@1.0.json](https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper/market/file/ZainCheung/马保国/马保国@1.0.json)** |
-| [ZainCheung](https://github.com/ZainCheung) | [网友评论](https://github.com/ZainCheung/CSDN-helper/blob/master/market/ZainCheung/网友评论/网友评论.md) | 随机 |  13  | 1.0  | **[https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper/market/file/ZainCheung/网友评论/网友评论@1.0.json](https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper/market/file/ZainCheung/网友评论/网友评论@1.0.json)** |
+| [ZainCheung](https://github.com/ZainCheung) | [helloWorld](https://github.com/ZainCheung/CSDN-helper/blob/master/market/ZainCheung/HelloWorld/helloWorld.md) | 所有 |  28  | 1.0  | **[https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper@master/market/ZainCheung/HelloWorld/HelloWorld@1.0.json](https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper@master/market/ZainCheung/HelloWorld/HelloWorld@1.0.json)** |
+| [ZainCheung](https://github.com/ZainCheung) | [马保国](https://github.com/ZainCheung/CSDN-helper/blob/master/market/ZainCheung/马保国/马保国.md) | 随机 |  1   | 1.0  | **[https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper@master/market/ZainCheung/马保国/马保国@1.0.json](https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper@master/market/ZainCheung/马保国/马保国@1.0.json)** |
+| [ZainCheung](https://github.com/ZainCheung) | [网友评论](https://github.com/ZainCheung/CSDN-helper/blob/master/market/ZainCheung/网友评论/网友评论.md) | 随机 |  13  | 1.0  | **[https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper@master/market/ZainCheung/网友评论/网友评论@1.0.json](https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper@master/market/ZainCheung/网友评论/网友评论@1.0.json)** |
 
 ## 加入我们
 
@@ -80,7 +80,7 @@
 
 ### 版本：1.0
 
-### 导入链接：[https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper/market/作者名/评论库名/评论库@版本.json](https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper/market/作者名/评论库名/评论库@版本.json)
+### 导入链接：[https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper@master/market/作者名/评论库名/评论库@版本.json](https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper@master/market/作者名/评论库名/评论库@版本.json)
 
 #### 随机：
 
