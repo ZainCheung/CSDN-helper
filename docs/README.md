@@ -34,7 +34,7 @@
 
 ## 二、**CSDN-helper**：点击名称即可安装👇
 
-| [正式版](https://greasyfork.org/zh-CN/scripts/401373-csdn%E5%8D%9A%E5%AE%A2%E5%88%B7%E7%A7%AF%E5%88%86%E5%88%B7%E7%AD%89%E7%BA%A7%E5%8A%A9%E6%89%8B) | [GitHub版](https://cdn.jsdelivr.net/gh/superBoyJack/CSDN-helper/main.js) |
+| [正式版](https://greasyfork.org/zh-CN/scripts/401373-csdn博客刷积分刷等级助手) | [GitHub版](https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper@master/main.user.js) |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
 |         在油猴上正式发布的版本, 最稳定, 更新频率较低         |         新增内容测试的地方, 更新频率高, 但功能不稳定         |
 
