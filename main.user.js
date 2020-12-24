@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         CSDN博客刷积分刷等级助手
 // @namespace    http://tampermonkey.net/
-// @version      1.1.8
+// @version      1.1.9
 // @description  打开任意一个CSDN博客页面,就可以进行自动点赞评论,可以涨积分升级,可以自定义策略与评论内容,高度可定制化
 // @author       ZainCheung
 // @match        *://blog.csdn.net/*/article/details/*
 // @grant        GM.xmlHttpRequest
 // @connect      csdn.net
-// @resource html      https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper/dist/app@1.0.html
+// @resource html      https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper@master/dist/app@1.0.html
 // @resource css      https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper/dist/app@1.0.css
 // @resource js      https://cdn.jsdelivr.net/gh/ZainCheung/CSDN-helper/dist/app@1.0.js
 // @grant        GM_getValue
